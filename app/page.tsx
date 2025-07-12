@@ -2,15 +2,7 @@ import { HomePage } from "@/components/home-page/HomePage";
 import { Meal } from "@/components/meal/Meal";
 import { MEAL_SHARE_API } from "@/data/mealShareApi";
 
-type MealType = {
-  id: number;
-  title: string;
-  description: string;
-  location: string;
-  when: string;
-  max_reservations: number;
-  price: number;
-}
+
 export default async function Home() {
   const dataResponse = await fetch(`${MEAL_SHARE_API.BASE_URL}meals`)
   const data = await dataResponse.json();
